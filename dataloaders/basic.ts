@@ -10,14 +10,14 @@ const users = [
 
 const posts = [
   { id: '1', title: 'Post 1', authorId: '1', editorId: '2' },
-  { id: '2', title: 'Post 2', authorId: '1', editorId: '1' },
-  { id: '3', title: 'Post 3', authorId: '2', editorId: '1' },
+  { id: '2', title: 'Post 2', authorId: '1', editorId: '2' },
+  { id: '3', title: 'Post 3', authorId: '1', editorId: '2' },
 ];
 
 const dbMock  = {
     users: {
       getByIds: async (ids) => {
-        console.log('Fetching users with ids:');
+        console.log('Fetching users with ids:', ids);
         return users.filter(user => ids.includes(user.id))
       },
     },

@@ -17,7 +17,7 @@ const posts = [
 
 const dbMock  = {
   users: {
-    getByIds: async (ids) => users.filter(user => ids.includes(user.id)),
+    getByIds: async (ids: readonly string[]) => users.filter(user => ids.includes(user.id)),
   },
 };
 
